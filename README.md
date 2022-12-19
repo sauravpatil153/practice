@@ -1,7 +1,7 @@
 # practice 
 
 
-[File 1](/file1)
-[File 2](/file2)
-[File 3](/file3)
+[File 1](/file1.md)
+[File 2](/file2.md)
+[File 3](/file3.md)
 
