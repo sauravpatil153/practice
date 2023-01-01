@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="border: 1px solid blue;">
+    <form action="submit" method="post">
+        <label>
+            <h3>Internet Usage Survey</h3>
+        </label>
+        <label>This survey is being conducted to help identify the internet usage patterns of our customer. <br>
+            Please take a few moments to complete and submit this short form. Thank you for your co-operation.</label>
+
+        <table cellspacing="30px" >
+            <tr>
+                <td>
+                    <label>What type of internet connection do you have?</label>
+                </td>
+                <td>
+                    <select name="iconnection" id="iconnection" size="4">
+                        <option value="Dial-up">Dial-up</option>
+                        <option value="DSL">DSL</option>
+                        <option value="High speed cable">High speed cable</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>What type of computers do you use the most at home?</label>
+                </td>
+                <td>
+                    <input type="radio" name="comptype" id="desktop" value="desktop">
+                    <label for="desktop">Desktop</label>
+                    <input type="radio" name="comptype" id="laptop" value="laptop">
+                    <label for="laptop">Laptop</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>How would you describe your main reason for using the Internet</label>
+                </td>
+                <td>
+                    <input type="radio" name="reasontouse" id="wra" value="wra">
+                    <label for="wra">To do work related activities</label><br>
+                    <input type="radio" name="reasontouse" id="sra" value="sra">
+                    <label for="sra">To do school related activities</label><br>
+                    <input type="radio" name="reasontouse" id="ep" value="ep">
+                    <label for="ep">For entertainment purpose</label><br>
+                    <input type="radio" name="reasontouse" id="other" value="other">
+                    <label for="other">Other activities</label><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Types of sites visited</legend>
+                        <label>What type of web sites do you access most often?<br>Check all that apply.</label><br>
+                        <input type="checkbox" name="sitetypes" id="si" value="si">
+                        <label for="si">Self Improvement</label><br>
+                        <input type="checkbox" name="sitetypes" id="entertainment" value="entertainment">
+                        <label for="entertainment">Entertainment</label><br>
+                        <input type="checkbox" name="sitetypes" id="n&s" value="n&s">
+                        <label for="n&s">News and Sports</label><br>
+                        <input type="checkbox" name="sitetypes" id="ref" value="ref">
+                        <label for="ref">Reference</label><br>
+                        <input type="checkbox" name="sitetypes" id="email" value="email">
+                        <label for="email">Email</label><br>
+                    </fieldset>
+                </td>
+                <td>
+                    <fieldset>
+                        <legend>Time spent using internet</legend>
+                        <br><label>During an avg week, how long do you spend online?</label><br>
+                        <input type="radio" name="spendtime" id="0-3" value="0-3">
+                        <label for="0-3">0-3 hours</label><br>
+                        <input type="radio" name="spendtime" id="4-6" value="4-6">
+                        <label for="4-6">4-6 hours</label><br>
+                        <input type="radio" name="spendtime" id="7-10" value="7-10">
+                        <label for="7-10">7-10 hours</label><br>
+                        <input type="radio" name="spendtime" id="11-14" value="11-14">
+                        <label for="11-14">11-14 hours</label><br>
+                        <input type="radio" name="spendtime" id="15+" value="15+">
+                        <label for="15+">15+ hours</label><br>
+
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Please comment on your opinions concerning Internet privacy and safety</label></td>
+            </tr>
+            <tr>
+                <td colspan="2"><textarea name="comments" id="comments" cols="100" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>First Name</label>
+                    <input type="text" name="nm" id="nm">
+                </td>
+                <td><label>Last Name</label>
+                    <input type="text" name="lm" id="lm">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Age</label>
+                    <input type="number" name="age" id="age" min="18" max="60">
+                </td>
+                <td><label>Zip Code</label>
+                    <input type="text" name="zc" id="zp">
+                </td>
+            </tr>
+            <tr>
+                <td><div align="right"><button type="submit" name="btn1" id="btn1">Click to submit</button></div></td>
+                <td><div align="left"><button type="reset" name="btn2" id="btn2">Clear form</button></div></td>
+            </tr>
+            
+        </table>
+        
+
+    </form>
+</body>
+
+</html>
