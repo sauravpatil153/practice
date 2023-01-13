@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var xhr = null;
+        function displaytable(arr) {
+            str = "<table style='border: 2px; border-collapse: collapse; text-align: center'>" +
+                "<tr><td>Id</td><td>User Id</td><td>Title</td></tr>";
+            for (var ob of arr) {
+                str += "<tr><td>" + ob.id + "</td><td>" + ob.userId + "</td><td>" + ob.title + "</td></tr>";
+            }
+            str += "</table>";
+            document.getElementById("mydiv").innerHTML = str;
+        }
+
+        function sendrequest() {
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            }
+            else {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            var url = "https://jsonplaceholder.typicode.com/posts/";
+            xhr.open("GET", url, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    jsondata = xhr.responseText;
+                    javascript = JSON.parse(jsondata);
+                    displaytable(javascript);
+                }
+            }
+            xhr.send();
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome to AJAX Request Portal</h1><br>
+    <h2>Fetch data</h2>
+    <button type="button" name="btn" id="btn" onclick="sendrequest()">Click</button><br><br>
+    <div id="mydiv">
+
+    </div>
+</body>
+
+</html>
